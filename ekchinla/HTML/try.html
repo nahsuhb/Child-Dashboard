@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>REGISTER NURSE</title>
+</head>
+<form name='NURSE'>
+	<table>
+		<tr>
+			<td>
+				Name:
+				<input type="text" name="Name">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Password:
+				<input type='password' name="Password">
+			</td>
+		</tr>
+		<tr>
+			<td>
+`				<button id="submit" onclick="action()">Authorize</button>
+			</td>
+		</tr>
+
+
+	</table>
+</form>
+<script type="module" src="index.js">
+	var person = prompt("Please enter your name", "Harry Potter");
+	function action()
+	{
+
+		//var ipc=require('ipc-Renderer');
+		//var autBut=document.getElementById('submit');
+		
+		var vari=document.getElementsByName('Name');
+		console.log(vari);
+	}
+</script>
+</html>
