@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="eel.js"></script>
+  <title>My Chart.js Chart</title>
+</head>
+<body>
+  <div class="container">
+    <canvas id="myChart"></canvas>
+  </div>
+<script>
+    var a,b=null
+    let myChart = document.getElementById('myChart').getContext('2d')
+    //Chart.defaults.global.defaultFontFamily = 'Lato';
+    //Chart.defaults.global.defaultFontSize = 18;
+    //Chart.defaults.global.defaultFontColor
+   // Chart.defaults.scale.ticks.beginAtZero=true;
+    eel.sex_ratio()(function(ret){
+      a=ret[0]
+      b=ret[1]
+      alert("The a is "+a);
+    })
+
+   var required_data={
+     labels:["MALE","FEMALE"],
+     datasets:[
+       {
+          data:[a,b],
+          backgroundColor:['Yellow','Blue']
+       }]
+  
+   }
+
+   var pieChart=new Chart(myChart,{
+     type:'doughnut',
+     data:required_data
+   });
+
+</script>
+</body>
+</html>

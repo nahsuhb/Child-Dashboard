@@ -7,7 +7,7 @@ function f1()
     }
     if(data["name"]=='nurse' && data["password"]=='nurse@123')
     {
-        eel.validate_nurse(data)
+        
         window.location.replace("finalregst.html")
     }
     else
